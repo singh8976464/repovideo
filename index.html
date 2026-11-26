@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Visualizza il video anche offline.">
+  <title>Il mio video</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">VIDEO</p>
+      <h1>Il mio video</h1>
+      <p class="intro">Puoi guardarlo online oppure salvarne una copia sul dispositivo per vederlo senza connessione.</p>
+    </header>
+
+    <section class="player-card" aria-label="Lettore video">
+      <video id="video" controls playsinline preload="metadata">
+        Il browser non supporta la riproduzione video.
+      </video>
+      <p id="status" class="status" role="status" aria-live="polite">Controllo la disponibilità del video…</p>
+    </section>
+
+    <section class="actions">
+      <button id="saveButton" class="primary" type="button">Scarica per la modalità offline</button>
+      <button id="removeButton" class="secondary" type="button">Rimuovi copia offline</button>
+    </section>
+
+    <p class="note">Per usare il video senza internet, apri questa pagina almeno una volta con una connessione, scarica la copia offline e poi aggiungi il sito alla schermata Home.</p>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
